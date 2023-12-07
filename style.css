@@ -1,165 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Lora', serif;
-
+* {
+    padding: 0%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
-.protfolio{
-    min-height: 100vh;
+
+.container {
+    height: 100vh;
     width: 100%;
-    display:flex;
-}
-.nav{
-    display:flex;
-    gap:3.5rem;
-    height:15vh;
-    width:100%;
-    
-    justify-content:center;
-    align-items:center;
-    position: fixed;
-}
-.nav li{
-    list-style: none;
-}
-.nav li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color:#100f0f;
+    background-image: linear-gradient(to right, rgb(214, 182, 118) 70%, rgb(224, 204, 149) 30%);
     position: relative;
+    overflow: hidden;
 }
-.left-container, .right-container{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    background: #9d9c9c;
-}
-.left-container{
-    background: #9d9c9c;
-    width:70%;
-    padding-left:3rem;
-}
-.right-container{
-    
-    background: linear-gradient(-45deg,#b11de6,#9d9c9c);
-    width:30%;
-}
-.icons .fa-brands{
-    color: #131010;
-    font-size: 1.7rem;
-}
-.icons{
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    gap:3rem;
-}
-.content{
-    margin-left: 4rem;
-}
-.content .intro{
-    font-size: 1.5rem;
-    color:#121010;
-}
-.content .intro span{
-    color:#b11de6;
-}
-.content h1{
-    font-size:3rem;
-    color:#b11de6;
-}
-.content .detail{
-    font:1.1rem;
-    color:rgb(14, 13, 13)f0f;
-    max-width:38rem;
-    margin:1.1rem 0 3rem 0;
-    line-height:1.8rem;
-}
-.btn button{
-    border:.1rem solid #b20aef;
-    font-size: 1.1rem;
-    padding:.8rem 1.5rem;
-    border-radius:.5rem;
-    cursor: pointer;
-    transition : .5s ease;
-   
-}
-button:nth-child(1){
-    background: #d07eee;
-
-}
-button:nth-child(2){
-    background: transparent;
-    color:#111011;
-    margin-left: 2rem;
-
-}
-button:nth-child(1):hover{
-    background: transparent;
-    color: #0f0d0f;
-
-}
-button:nth-child(2):hover{
-    background: #ca6eeb;
-    color:#262525;
-
-}
-.icons .fa-brands:hover{
-    cursor:pointer;
-    background: linear-gradient(#979191, #b11de6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.design .circle{
-    aspect-ratio: 1;
+.wave {
     position: absolute;
-    border-radius: 30%;
-    top:50%;
-    left:70%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    right: 30%;
 }
-.circle:nth-child(1){
-background: linear-gradient(90deg, transparent 50%, #9d9c9c 50%);
-    width:38rem;
+nav {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.circle:nth-child(2){
-    width:30rem;
-    background-image: url("image/sc.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    border:.1rem solid white;
-    box-shadow: 
-    0 0 1rem #878484,
-    inset 0 0 1rem #8d8b8b,
-    0 0 1rem #ca6eeb,
-    inset 0 0 1rem #ca6eeb,
-    0 0 1rem #d07eee,
-    inset 0 0 1rem #d07eee;
+nav ul {
+    display: flex;
+    list-style-type: none;  
 }
-.nav li ::after{
-    content:"";
-    position:absolute;
-    background: #fff;
-    width:100%;
-    height:.1rem;
-    left:0;
-    bottom:-5px;
-    transform:scaleX(0);
-    transition:transform .5s;
+nav ul li{
+    margin:0 5px;
 }
-.navlist li a:hover::after{
-    transform: scaleX(0);
+nav ul a{
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: #494234;
+    position: relative;
+    z-index: 1;
 }
-.foot{
-    padding:5%;
-    background:rgb(101, 96, 96);
+nav ul a::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0px;
+    border-radius: 20px;
+    background-color: #badca9;
+    z-index: -1;
+    transition: 0.5s;
 }
-.cs{
-    font-size: 30px;
-    color: rgb(230, 29, 183);
+nav ul a:hover:after{
+    width: 100%;
+}
+.main-content {
+    width: 60%;
+    padding-top: 100px;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.image,.main-text{
+    flex-basis: 50%;
+}
+.image img{
+    width: 100%;
+}
+.main-content h1 {
+    font-size: 60px;
+    letter-spacing: 1px;
+    color: #494234;
+}
+.main-content p{
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.main-content button{
+    margin-top: 2.5rem;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border-radius: 0 50% 50% 0;
+    background-color: #494234;
+    color: white;
+    cursor: pointer;
+}
+.swiper{
+    width: 20rem;
+}
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+}
+.box{
+    display: flex;
+    align-items: center;
+}
+.right .box .image img{
+    width: 70%;
+}
+.image{
+    margin-top: 2rem;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: -5px 5px 17px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.image:hover{
+    background-color: rgba(73,66,52,0.7);
+}
+.box .inner-box{
+    margin: 1.5rem 0 0 1rem;
+}
+.box .inner-box p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.social-links{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+.social-links::before{
+    content: "";
+    width: 80%;
+    height: 3px;
+    position: absolute;
+    top:42%;
+    left: -150px;
+    background-color: #494234;
+}
+.social-links i{
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #aad791;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.social-links i:hover{
+    transform: translateY(-5px);
 }
